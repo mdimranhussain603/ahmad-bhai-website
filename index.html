@@ -1,0 +1,858 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AHMAD_BHAI | Premium Digital Services</title>
+
+<style>
+:root {
+    --dark: #06101f;
+    --navy: #0b1933;
+    --navy-light: #14294d;
+    --gold: #ffcc55;
+    --gold-light: #ffe39a;
+    --white: #ffffff;
+    --text: #eaf0ff;
+    --muted: #b4c0d7;
+    --border: #ffffff20;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--dark);
+    color: var(--text);
+}
+
+/* HEADER */
+
+header {
+    background: #06101ff5;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #ffcc5530;
+    box-shadow: 0 5px 25px #0005;
+    backdrop-filter: blur(12px);
+}
+
+/* BIGGER AHMAD_BHAI LOGO */
+
+.logo {
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 90px 20px;
+    color: white;
+    background:
+    radial-gradient(circle at 80% 20%, #294b8c 0%, transparent 35%),
+    linear-gradient(135deg, #06101f, #142d5a);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 850px;
+    animation: appear .8s ease;
+}
+
+.hero-tag {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 72px);
+    line-height: 1.12;
+    margin-bottom: 22px;
+    color: white;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #d9e3fa;
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 15px 28px;
+    border-radius: 9px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 28px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: var(--gold-light);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px #ffcc5540;
+}
+
+/* COMMON SECTION */
+
+section {
+    padding: 85px 7%;
+    background: var(--dark);
+}
+
+.heading {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 14px;
+    color: white;
+}
+
+.heading span {
+    color: var(--gold);
+}
+
+.subheading {
+    text-align: center;
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+/* FAST IP */
+
+.fast-ip {
+    background: linear-gradient(180deg, #0b1933, #06101f);
+}
+
+.ip-card {
+    max-width: 900px;
+    margin: auto;
+    padding: 55px 25px;
+    border-radius: 22px;
+    text-align: center;
+    color: white;
+    background:
+    radial-gradient(circle at top right, #294d8d, transparent 55%),
+    linear-gradient(135deg, #101b36, #0b1933);
+    border: 1px solid #ffcc5550;
+    box-shadow: 0 18px 50px #0006;
+    transition: .3s;
+}
+
+.ip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 55px #ffcc5520;
+}
+
+.ip-badge {
+    display: inline-block;
+    background: #ffcc5520;
+    color: var(--gold);
+    border: 1px solid #ffcc5570;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.ip-icon {
+    font-size: 58px;
+    margin: 25px 0;
+}
+
+.ip-card h1 {
+    color: var(--gold);
+    font-size: clamp(32px, 5vw, 54px);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.ip-card p {
+    color: #dce6ff;
+    line-height: 1.8;
+}
+
+.ip-button {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 15px 28px;
+    margin-top: 25px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.ip-button:hover {
+    background: #1ebc59;
+    transform: translateY(-3px);
+}
+
+/* SERVICES */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: linear-gradient(145deg, #14294d, #0b1933);
+    padding: 32px;
+    border-radius: 18px;
+    border: 1px solid #ffcc5530;
+    box-shadow: 0 8px 30px #0004;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px #ffcc5520;
+    border-color: var(--gold);
+}
+
+.card-icon {
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: #ffcc5520;
+    border: 1px solid #ffcc5540;
+    font-size: 32px;
+    margin-bottom: 23px;
+}
+
+.card h3 {
+    font-size: 21px;
+    margin-bottom: 14px;
+    color: var(--gold);
+}
+
+.card p {
+    color: var(--muted);
+    line-height: 1.8;
+    min-height: 55px;
+}
+
+.price {
+    color: var(--gold);
+    font-size: 28px;
+    font-weight: bold;
+    margin: 23px 0;
+}
+
+.card button {
+    width: 100%;
+    background: var(--gold);
+    color: var(--dark);
+    border: none;
+    padding: 14px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.card button:hover {
+    background: var(--gold-light);
+}
+
+/* WHY US */
+
+.why {
+    background: linear-gradient(135deg, #101f3b, #06101f);
+    color: white;
+    border-top: 1px solid #ffcc5520;
+    border-bottom: 1px solid #ffcc5520;
+}
+
+.why .heading {
+    color: white;
+}
+
+.why .subheading {
+    color: #c4cee2;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.why-item {
+    padding: 28px;
+    border: 1px solid #ffcc5540;
+    border-radius: 15px;
+    background: #ffffff08;
+    text-align: center;
+    transition: .3s;
+}
+
+.why-item:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.why-item div {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.why-item h3 {
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.why-item p {
+    color: #c4cee2;
+    line-height: 1.7;
+}
+
+/* HOW IT WORKS */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 22px;
+    text-align: center;
+}
+
+.step {
+    padding: 25px;
+    background: #101f3b;
+    border: 1px solid #ffcc5530;
+    border-radius: 16px;
+    transition: .3s;
+}
+
+.step:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.step-number {
+    width: 48px;
+    height: 48px;
+    background: var(--gold);
+    color: var(--dark);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    margin: 0 auto 18px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.step h3 {
+    color: var(--gold);
+}
+
+.step p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-top: 10px;
+}
+
+/* ORDER */
+
+.order-section {
+    background: linear-gradient(180deg, #0b1933, #06101f);
+}
+
+.order-box {
+    max-width: 650px;
+    background: #14294d;
+    padding: 35px;
+    border-radius: 20px;
+    margin: auto;
+    border: 1px solid #ffcc5550;
+    box-shadow: 0 12px 35px #0005;
+}
+
+label {
+    display: block;
+    color: var(--gold);
+    font-weight: bold;
+    margin: 18px 0 9px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 14px;
+    background: #09172e;
+    color: white;
+    border: 1px solid #ffffff35;
+    border-radius: 9px;
+    font-size: 15px;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #9aa9c3;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px #ffcc5520;
+}
+
+select option {
+    background: #0b1933;
+    color: white;
+}
+
+.total {
+    background: #09172e;
+    color: var(--gold);
+    border: 1px solid #ffcc5540;
+    padding: 20px;
+    margin-top: 22px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.order-box .btn {
+    width: 100%;
+}
+
+/* FAQ */
+
+.faq {
+    max-width: 800px;
+    margin: auto;
+}
+
+.faq details {
+    background: #14294d;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 13px;
+    border: 1px solid #ffcc5530;
+    transition: .3s;
+}
+
+.faq details[open] {
+    border-color: var(--gold);
+}
+
+.faq summary {
+    cursor: pointer;
+    color: var(--gold);
+    font-weight: bold;
+}
+
+.faq p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-top: 14px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: linear-gradient(135deg, #14294d, #06101f);
+    text-align: center;
+    border-top: 1px solid #ffcc5530;
+}
+
+.contact p {
+    color: var(--muted);
+    margin: 18px 0;
+}
+
+.contact .btn {
+    margin: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #040b16;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    border-top: 1px solid #ffcc5540;
+}
+
+footer span {
+    color: var(--gold);
+}
+
+/* ANIMATION */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:600px) {
+    header {
+        flex-direction: column;
+        gap: 17px;
+        padding: 18px 10px;
+    }
+
+    .logo {
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 75px 18px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .heading {
+        font-size: 29px;
+    }
+
+    .ip-card {
+        padding: 35px 18px;
+    }
+
+    .ip-card h1 {
+        font-size: 32px;
+        line-height: 1.25;
+    }
+
+    .order-box {
+        padding: 23px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">AHMAD<span>_BHAI</span></div>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#order">Order</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <div class="hero-content">
+        <div class="hero-tag">WELCOME TO AHMAD_BHAI</div>
+        <h1>Digital Services<br><span>Made Simple.</span></h1>
+        <p>
+            Professional website design, landing pages
+            aur technical support ek hi jagah.
+            Apni requirement bhejiye aur details confirm kijiye.
+        </p>
+        <a href="#services" class="btn">Explore Services →</a>
+    </div>
+</div>
+
+<section class="fast-ip">
+    <div class="ip-card">
+        <div class="ip-badge">● CONTACT FOR AVAILABILITY</div>
+        <div class="ip-icon">🌐</div>
+
+        <h1>FASTEST IP AND VPS AVAILABLE</h1>
+
+        <p>Service availability aur details ke liye WhatsApp par contact karein.</p>
+
+        <a class="ip-button" href="https://wa.me/919693050978" target="_blank" rel="noopener noreferrer">WhatsApp Now</a>
+    </div>
+</section>
+
+<section id="services">
+    <h2 class="heading">Our <span>Services</span></h2>
+    <p class="subheading">Simple, modern aur professional digital solutions.</p>
+
+    <div class="cards">
+        <div class="card">
+            <div class="card-icon">💻</div>
+            <h3>Website Design</h3>
+            <p>Professional website design for your business.</p>
+            <div class="price">₹999+</div>
+            <button onclick="selectService('Website Design')">Order Now</button>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🚀</div>
+            <h3>Landing Page</h3>
+            <p>Modern and responsive landing page design.</p>
+            <div class="price">₹499+</div>
+            <button onclick="selectService('Landing Page')">Order Now</button>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🛠️</div>
+            <h3>Technical Support</h3>
+            <p>Technical help and basic website support.</p>
+            <div class="price">On Request</div>
+            <button onclick="selectService('Technical Support')">Order Now</button>
+        </div>
+    </div>
+</section>
+
+<section class="why">
+    <h2 class="heading">Why Choose <span>Us?</span></h2>
+    <p class="subheading">Clear communication aur customer-focused digital services.</p>
+
+    <div class="why-grid">
+        <div class="why-item">
+            <div>⚡</div>
+            <h3>Quick Response</h3>
+            <p>WhatsApp par apni requirement share karein.</p>
+        </div>
+        <div class="why-item">
+            <div>🎯</div>
+            <h3>Simple Process</h3>
+            <p>Service aur requirement clearly discuss karein.</p>
+        </div>
+        <div class="why-item">
+            <div>💡</div>
+            <h3>Modern Design</h3>
+            <p>Clean aur responsive digital solutions.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="heading">How It <span>Works</span></h2>
+    <p class="subheading">Order karne ka simple process.</p>
+
+    <div class="steps">
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Choose Service</h3>
+            <p>Apni pasand ki service select karein.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Send Requirement</h3>
+            <p>Form bharkar WhatsApp par request bhejein.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>Confirm Details</h3>
+            <p>Final price aur delivery details discuss karein.</p>
+        </div>
+    </div>
+</section>
+
+<section id="order" class="order-section">
+    <h2 class="heading">Place Your <span>Order</span></h2>
+    <p class="subheading">Apni details bhariye aur WhatsApp par request bhejiye.</p>
+
+    <div class="order-box">
+        <form id="orderForm">
+            <label>Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label>Select Service</label>
+            <select id="service" onchange="calculateTotal()">
+                <option value="Website Design">Website Design</option>
+                <option value="Landing Page">Landing Page</option>
+                <option value="Technical Support">Technical Support</option>
+            </select>
+
+            <label>Package</label>
+            <select id="quantity" onchange="calculateTotal()">
+                <option value="1">Basic - 1</option>
+                <option value="2">Standard - 2</option>
+                <option value="5">Premium - 5</option>
+            </select>
+
+            <label>Your Requirement</label>
+            <textarea id="details" rows="4" placeholder="Describe your requirement"></textarea>
+
+            <div class="total">
+                Estimated Total: ₹<span id="total">999</span>
+            </div>
+
+            <p style="color:#b4c0d7;margin-top:15px;line-height:1.6;">
+                Final price aur payment details order confirm hone ke baad WhatsApp par share ki jayengi.
+            </p>
+
+            <button type="submit" class="btn">Continue on WhatsApp →</button>
+        </form>
+    </div>
+</section>
+
+<section>
+    <h2 class="heading">Frequently Asked <span>Questions</span></h2>
+    <p class="subheading">Common questions ke answers.</p>
+
+    <div class="faq">
+        <details>
+            <summary>How can I place an order?</summary>
+            <p>Order form fill karke Continue on WhatsApp par click karein.</p>
+        </details>
+        <details>
+            <summary>Is the displayed price final?</summary>
+            <p>Displayed price estimated hai. Final price requirement discuss karne ke baad confirm hoga.</p>
+        </details>
+        <details>
+            <summary>How can I contact AHMAD_BHAI?</summary>
+            <p>WhatsApp ya phone call ke through contact kar sakte hain.</p>
+        </details>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2 class="heading">Contact <span>AHMAD_BHAI</span></h2>
+    <p>WhatsApp ya call ke liye contact karein.</p>
+
+    <a class="btn" href="https://wa.me/919693050978" target="_blank" rel="noopener noreferrer">WhatsApp: 9693050978</a>
+    <a class="btn" href="tel:+919693050978">Call: 9693050978</a>
+</section>
+
+<footer>
+    <p>© 2026 <span>AHMAD_BHAI</span>. All Rights Reserved.</p>
+    <p style="color:#aab5cc;margin-top:10px;font-size:13px;">Digital Services Made Simple.</p>
+</footer>
+
+<script>
+function selectService(serviceName) {
+    document.getElementById("service").value = serviceName;
+    document.getElementById("order").scrollIntoView({ behavior: "smooth" });
+    calculateTotal();
+}
+
+function calculateTotal() {
+    let service = document.getElementById("service").value;
+    let quantity = Number(document.getElementById("quantity").value);
+
+    let price = 0;
+
+    if (service === "Website Design") {
+        price = 999;
+    } else if (service === "Landing Page") {
+        price = 499;
+    }
+
+    document.getElementById("total").innerText =
+        price === 0 ? "On Request" : price * quantity;
+}
+
+document.getElementById("orderForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let service = document.getElementById("service").value;
+    let quantity = document.getElementById("quantity").value;
+    let details = document.getElementById("details").value;
+    let total = document.getElementById("total").innerText;
+
+    let message =
+        "Namaste AHMAD_BHAI\n" +
+        "Name: " + name + "\n" +
+        "Service: " + service + "\n" +
+        "Package: " + quantity + "\n" +
+        "Estimated Total: " + total + "\n" +
+        "Requirement: " + details;
+
+    window.open(
+        "https://wa.me/919693050978?text=" + encodeURIComponent(message),
+        "_blank"
+    );
+});
+
+calculateTotal();
+</script>
+
+</body>
+</html>
